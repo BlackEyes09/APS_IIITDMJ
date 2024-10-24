@@ -83,7 +83,7 @@ const Members = () => {
       // twitter: "https://twitter.com/johndoe",
       instagram: "https://www.instagram.com/adi.ayt?igsh=djY4OHcxNGI0cmF6",
       gmail: "mailto:guptaaditya1801@gmail.com",
-      image: "/aditya.jpg"
+      image: "/aditya.jpeg"
     },
     {
       name: "Abhishek Gupta",
@@ -117,12 +117,12 @@ const Members = () => {
 
   return (
     <div className="main">
-      <div className="relative w-full flex items-center justify-end top-2">
+      <div className="relative w-full flex items-center justify-end">
         {renderNavbar()}
       </div>
 
-      <div className="logo">
-        <Image src="/membersbanner.png" alt="banner" width={1000} height={1000} layout="responsive" />
+      <div className="logo relative -mt-5 z-10">
+        <Image src="/membersbanner.png" alt="banner" width={1000} height={1000} layout="responsive" className="relative"/>
       </div>
 
 
@@ -143,7 +143,7 @@ const Members = () => {
         <h1 className="font-jetbrains-mono text-4xl text-white text-center pb-10">
           THE CREW
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6  ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-4 md:ml-28 md:mr-28 pb-10">
           {members.map((member, index) => (
             <div 
             key={index} 
@@ -180,70 +180,18 @@ const Members = () => {
           ))}
         </div>
       </div>
-      <div className="abouttext flex flex-row justify-center">
-        <div className="pt-20 pb-20 pl-32 pr-32 w-1/2">
+      <div className="abouttext  flex flex-col md:flex-row justify-center"> 
+          <div className="pt-20 pb-20 px-4 md:pl-32 md:pr-32 md:w-1/2">
           <h1 className="font-jetbrains-mono text-4xl text-white pb-4">WANNA JOIN US?</h1>
-          <p className="text-teal-400 mb-6">Wanna be a part of The Astronomy And Physics Society? Don't worry. Here we are giving you the opportunity!!!
+          <p className="text-teal-400 mb-6">Wanna be a part of The Astronomy And Physics Society? Don&apos;t worry. Here we are giving you the opportunity!!!
           </p>
           <TailwindcssButtons/>
         </div>
-        <div className="bg-cover flex align-middle relative  w-1/2">
+        <div className="bg-cover flex align-middle relative w-full md:w-1/2">
           <Image className="mr-20" src="/3.jpg" alt="about" layout="fill" objectFit="cover" />
         </div>
       </div>
 
-
-      <footer className="bg-teal-900">
-        <div className="max-w-8xl  py-20 mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 ml-10  md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            <div>
-              <h3 className="text-2xl font-jetbrains-mono font-bold text-white">Contact Us</h3>
-              <p className="mt-4 font-normal text-teal-400" >52GG+H4G, Airport Rd, PDPM IIITDM Jabalpur Campus, <br />
-                Khamaria, Jabalpur, Chakdehi, Madhya Pradesh 482005</p>
-              {/*UNDER DEVELOPMENT PHASE <p className="mt-2 font-normal gray-400">Phone: 123-456-7890</p> */}
-              <p>Email: astronomy@iiitdmj.ac.in</p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-jetbrains-mono font-bold text-white">Links</h3>
-              <ul className="mt-4 grid grid-cols-2 space-y-2 text-teal-400 font-normal">
-
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/sessions">Sessions</a></li>
-                <li><a href="/form">Form</a></li>
-                <li><a href="/members">Members</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/forms">Forms</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-jetbrains-mono font-bold text-white">Social Media</h3>
-              <ul className="mt-4 space-y-2  text-teal-400 font-normal">
-                <li><a href="https://instagram.com/aps_iiitdmj">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/company/astronomy-and-physics-society/">LinkedIn</a></li>
-                <li><a href="https://www.youtube.com/@AstronomyandPhysicsSociety">YouTube</a></li>
-              </ul>
-            </div>
-
-            <div className="logo  ">
-              <Image src="/footsticker.png" alt="logo" width={300} height={300} className={styles.rotate} />
-            </div>
-            {/* <div>
-                <h3 className="text-2xl font-jetbrains-mono font-bold text-white">Newsletter</h3>
-                <p className="mt-4">Subscribe to our newsletter to receive updates and news.</p>
-                <form className="mt-2">
-                  <input type="email" placeholder="Enter your email" className="w-full py-2 px-4 rounded-md bg-gray-800 text-white" />
-                  <button type="submit" className="mt-2 py-2 px-4 bg-teal-400 text-white rounded-md">Subscribe</button>
-                </form>
-              </div> */
-            }
-
-          </div>
-          <div className="mt-8 text-center">
-            <p>&copy; 2024 APS | All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
 
     </div>
   );
