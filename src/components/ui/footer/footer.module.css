@@ -4,8 +4,8 @@
 }
 
 .footer {
-  padding-top: 1rem; /* Reduced padding */
-  padding-bottom: 1rem; /* Reduced padding */
+  padding-top: 2rem; 
+  padding-bottom: 2rem; 
 }
   
 @keyframes rotate {
